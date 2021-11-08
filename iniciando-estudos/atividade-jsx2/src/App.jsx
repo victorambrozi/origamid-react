@@ -21,23 +21,26 @@ const produtos = [
   },
 ];
 
-export const App = () => (
-  <section>
-    {
-      produtos
-        .filter(produto => +(produto.preco).replace('R$ ', '') > 1500)
-        .map(produto => (
-          <div key={produto.id}>
-            <h1>{produto.nome}</h1>
-            <p>{produto.preco}</p>
+export const App = () => {
+  const dados = produtos.filter(({ preco }) => preco.replace('R$ ', '') > 1500);
+
+  return (
+    <section>
+      {
+        dados.map(({ id, nome, preco, cores }) =>
+        (
+          <div key={id}>
+            <h1>{nome}</h1>
+            <p>{preco}</p>
             <ul>
-              {produto.cores.map(cor => (
+              {cores.map((cor) => 
+              (
                 <li key={cor} style={{ backgroundColor: cor, color: '#fff', marginTop: '5px' }}>{cor}</li>
               ))}
             </ul>
           </div>
         ))
-    }
-  </section>
-
-);
+      }
+    </section>
+  )
+}
