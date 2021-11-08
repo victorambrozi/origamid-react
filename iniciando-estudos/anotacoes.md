@@ -19,4 +19,28 @@ npm start || yarn start
 ```
 
 # JSX - Javascript + XML
-JSX é semelhante ao HTML. 
+JSX é semelhante ao HTML. É uma extensão do javascript que permite a adição de tags HTML junto ao javascript.
+
+## Diferenças do JSX para o HTML
+
+[] className - é o atributo class.
+[] htmlFor -  é o atributo for, numa tag label
+[] camelCase
+[] acesso de variaveis javascript são permitidas através das chaves {} 
+
+## Comportamento do JSX com array
+Ao criar uma lista com o JSX, o react exige uma 'key', que é resposável por identificar cada elemento da lista. Essa 'key' deve ser única. 
+Quando realizar um map(), não é recomnedado utilizar o index para identificar esses elementos, somente em último caso.
+
+Essas 'keys' são utilzadas pelo react, para identificar os itens que foram alterados, adicionados ou removidos.
+
+# Eventos com React
+
+Os eventos são sintáticos. Significa que são compatíveis em todos os browsers que o react da suporte. Os eventos são passados como atributos(camelCase).
+
+# Componentes
+São utilizados para dividir a aplicação em pequenos pedaços, para melhor manutenção. Não interem na performace.
+
+# Propriedades
+As propriedades são passadas para os componentes da mesma forma que os argumentos são passados para as funções. O acesso às propriedades do componente é feita através do argumento 'props'. Esse nome foi convencionado pela comuinidade React, mas pode ser passado como qualquer nome. 
+As propriedades do objeto são passadas como atributos na chamada dos componentes.

@@ -1,7 +1,12 @@
 import React from "react";
+import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
 
-export const App =() => {
+export const App = () => {
     return (
-        <div>Meu app</div>
+        <React.Fragment>
+            <Header />
+            <Footer text='props passada para o componente'/>
+        </React.Fragment>
     )
 }
